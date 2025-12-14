@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #ebfcf4, #fcebf4);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CalculatorController">
+   <children>
+      <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" prefHeight="500.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-padding: 30;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow color="#0000001a" height="60.0" radius="29.5" width="60.0" />
+         </effect>
+         <children>
+            <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" prefHeight="80.0" style="-fx-background-color: #fff5f8; -fx-background-radius: 15; -fx-text-fill: #333333; -fx-border-color: #ffe6f2; -fx-border-radius: 15; -fx-border-width: 2;" text="0">
+               <font>
+                  <Font name="System Light" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </TextField>
+
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="radLabel" alignment="CENTER" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #ffccdd; -fx-background-radius: 8; -fx-text-fill: #e91e63; -fx-font-weight: bold;" text="RAD" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </HBox>
+
+            <GridPane hgap="12.0" vgap="12.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button onAction="#onMemoryClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ffd6e7; -fx-text-fill: #d63384; -fx-background-radius: 10;" text="MC" />
+                  <Button onAction="#onMemoryClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ffd6e7; -fx-text-fill: #d63384; -fx-background-radius: 10;" text="MR" GridPane.columnIndex="1" />
+                  <Button onAction="#onMemoryClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ffd6e7; -fx-text-fill: #d63384; -fx-background-radius: 10;" text="M+" GridPane.columnIndex="2" />
+                  <Button onAction="#onMemoryClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ffd6e7; -fx-text-fill: #d63384; -fx-background-radius: 10;" text="M-" GridPane.columnIndex="3" />
+                  
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="sin" GridPane.columnIndex="4" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="cos" GridPane.columnIndex="5" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="tan" GridPane.columnIndex="6" />
+                  
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="7" GridPane.columnIndex="7" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="8" GridPane.columnIndex="8" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="9" GridPane.columnIndex="9" />
+
+                  <Button onAction="#onConstantClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="π" GridPane.rowIndex="1" />
+                  <Button onAction="#onConstantClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="e" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="x²" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="√" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="log" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="ln" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Button onAction="#onOperatorClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="x^y" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="4" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="5" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="6" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #7dfcd2; -fx-text-fill: #004d40; -fx-background-radius: 10;" text="±" GridPane.rowIndex="2" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #7dfcd2; -fx-text-fill: #004d40; -fx-background-radius: 10;" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="1/x" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button onAction="#onFunctionClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #baffdf; -fx-text-fill: #006633; -fx-background-radius: 10;" text="x!" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  
+                  <Button onAction="#onOperatorClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ff80ab; -fx-text-fill: white; -fx-background-radius: 10;" text="+" GridPane.columnIndex="4" GridPane.rowIndex="2"> <font> <Font size="14.0" /> </font> </Button>
+                  <Button onAction="#onOperatorClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ff80ab; -fx-text-fill: white; -fx-background-radius: 10;" text="-" GridPane.columnIndex="5" GridPane.rowIndex="2"> <font> <Font size="14.0" /> </font> </Button>
+                  <Button onAction="#onOperatorClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ff80ab; -fx-text-fill: white; -fx-background-radius: 10;" text="×" GridPane.columnIndex="6" GridPane.rowIndex="2"> <font> <Font size="14.0" /> </font> </Button>
+                  
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="1" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="2" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="3" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+
+                  <Button onAction="#onClear" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #7dfcd2; -fx-text-fill: #004d40; -fx-background-radius: 10;" text="AC" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <Button onAction="#onDelete" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #7dfcd2; -fx-text-fill: #004d40; -fx-background-radius: 10;" text="DEL" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  
+                  <Button onAction="#onOperatorClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ff80ab; -fx-text-fill: white; -fx-background-radius: 10;" text="÷" GridPane.columnIndex="4" GridPane.rowIndex="3"> <font> <Font size="14.0" /> </font> </Button>
+                  
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                  
+                  <Button onAction="#onNumberClick" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: white; -fx-text-fill: #333; -fx-background-radius: 10; -fx-border-color: #ffe6f2; -fx-border-radius: 10;" text="." GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  <Button onAction="#onEquals" maxWidth="Infinity" prefHeight="50.0" style="-fx-background-color: #ff3385; -fx-text-fill: white; -fx-background-radius: 10;" text="=" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
